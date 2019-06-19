@@ -1,0 +1,21 @@
+var sentence = "Pig Latin is cool";
+var pigLatinSentence = "";
+
+function convertPigLatin(content) {
+    var splitSentence = content.split(" ");
+    for (i = 0; i < splitSentence.length; i++) {
+        var firstLetter = splitSentence[i].substring(0, 1);
+        if (firstLetter == "!" || firstLetter == "?" || firstLetter == "," || firstLetter == ".") {
+            pigLatinSentence += firstLetter;
+        } else {
+            splitSentence[i] += firstLetter + "ay ";
+            splitSentence[i].slice(1);
+            console.log(splitSentence[i].slice(1));
+            pigLatinSentence += (splitSentence[i].slice(1));}
+    }
+    
+}
+
+convertPigLatin(sentence);
+
+console.log(pigLatinSentence);
