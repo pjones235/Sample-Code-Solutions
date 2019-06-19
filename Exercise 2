@@ -1,0 +1,22 @@
+var wordList = ["dog", "Fishing", "have", "Middle", "C"];
+
+function isOdd(num) {
+    return num % 2;
+}
+
+function middleChar(word) {
+    var example = word;
+    var index1 = Math.floor(example.length / 2);
+    var index2 = index1 + 1;
+    if (isOdd(example.length)) {
+        return example.substring(index1, index2);
+    } else {
+        index1 -= 1;
+        return example.substring(index1, index2);
+
+    }
+}
+
+for (i = 0; i < wordList.length; i++) {
+console.log(middleChar(wordList[i]));
+}
